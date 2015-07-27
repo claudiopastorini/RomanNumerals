@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="it.scripto.romannumerals.MainActivity">
+
+    <!-- ActionBar -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/app_bar_elevation"
+        android:background="@color/primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_card_view"
+        android:layout_gravity="center"
+        android:layout_below="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="@dimen/card_view_corner_radius"
+        android:layout_marginTop="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/small_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/helper_roman_text_view"
+                android:text="@string/roman_helper"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/small_padding"
+                android:layout_marginTop="@dimen/big_padding" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/arabic_text_view"
+                android:singleLine="true"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                tools:text="18"
+                style="@style/Base.TextAppearance.AppCompat.Display1"
+                android:textColor="@color/accent" />
+
+            <it.scripto.models.RomanEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/roman_edit_text"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:gravity="center"
+                android:hint="@string/roman_hint"
+                android:inputType="textCapCharacters|textNoSuggestions"
+                android:layout_marginBottom="@dimen/small_padding" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/helper_arabic_text_view"
+                android:text="@string/arabic_helper"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/big_padding"
+                android:layout_marginBottom="@dimen/small_padding" />
+
+            <it.scripto.models.RomanTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/roman_text_view"
+                android:layout_gravity="center_horizontal"
+                tools:text="XII"
+                style="@style/Base.TextAppearance.AppCompat.Display1"
+                android:textColor="@color/accent" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/arabic_edit_text"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/arabic_hint"
+                android:singleLine="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_marginBottom="@dimen/small_padding" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

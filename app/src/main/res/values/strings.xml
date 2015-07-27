@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Roman Numerals</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="arabic_helper">Within this EditText you can write only numbers in arabic form (between 1 and 3999), in the next TextView will be shown as a result of the conversion to roman numeral. (NaN means Not a Number)</string>
+    <string name="roman_helper">Within this EditText you can only write roman numerals (between 1 and 3999), in the next TextView will be shown as a result of the conversion in arabic form. (NaN means Not a Number)</string>
+    <string name="roman_hint">Insert a roman numerals (e.g. XVIII)</string>
+    <string name="arabic_hint">Insert a number (e.g. 12)</string>
+</resources>
